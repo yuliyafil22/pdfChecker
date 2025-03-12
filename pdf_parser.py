@@ -3,7 +3,7 @@ from typing import Dict
 
 
 def extract_pdf_info(file_path: str) -> Dict[str, str]:
-    """Читает информацию из PDF и возвращает ее в виде словаря."""
+    """Читаем информацию из PDF и возвращаем ее в виде словаря."""
     with open(file_path, "rb") as file:
         reader = pypdf.PdfReader(file)
         metadata = reader.metadata
@@ -17,7 +17,7 @@ def extract_pdf_info(file_path: str) -> Dict[str, str]:
 
 
 def compare_pdf_structure(reference_file: str, test_file: str) -> bool:
-    """Сравнивает структуру тестируемого PDF с эталонным."""
+    """Сравниваем структуру тестируемого PDF с эталонным."""
     ref_info = extract_pdf_info(reference_file)
     test_info = extract_pdf_info(test_file)
 
