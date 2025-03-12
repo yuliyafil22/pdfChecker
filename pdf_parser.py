@@ -3,7 +3,7 @@ from typing import Dict
 
 
 def extract_pdf_info(file_path: str) -> Dict[str, str]:
-    """Читает информацию из PDF и возвращает ее в виде словаря."""
+    """Читает информацию из PDF и возвращает ее в виде словаряя."""
     with open(file_path, "rb") as file:
         reader = pypdf.PdfReader(file)
         metadata = reader.metadata
